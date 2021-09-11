@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>SHAM-News</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="/css/style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+
+		<div class="site-content"></div>
+
+        {{>header}} <!-- .site-header -->
+
+			<div class="hero" data-bg-image="images/banner.jpg">
+				<div class="container">
+					<form class="find-location">
+						<input id="cityInput" type="text" placeholder="Enter your city to know..." autocomplete="off">
+						<p id="error" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight:bold; font-color:red;"></p>
+						<input id="btnSearchNow" type="submit" value="Search Now">
+					</form>
+
+				</div>
+			</div>
+			<div class="forecast-table">
+				<div class="container">
+					<div class="forecast-container">
+						<div class="today forecast">
+							<div class="forecast-header">
+								<div id="outputDay" class="day"></div>
+								<div id="outputDate_Month" class="date"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div id="outputCity_CountryName" class="location"></div>
+								<div class="degree">
+									<div id="outputTemperature" class="num"></div>
+									<div id="temperatureIcon" class="forecast-icon">
+										
+									</div>	
+								</div>
+								<span id="humidityIcon"></span>
+								<span id="windSpeed"></span>
+								<span id="sunRise"></span>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="forecastDay1" class="day"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div id="forecastIcon1" class="forecast-icon">
+								</div>
+								<div id="forecastTemp1" class="degree"></div>
+							</div>
+						</div>
+						<div class="forecast">
+							<div  class="forecast-header">
+								<div id="forecastDay2" class="day"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div id="forecastIcon2" class="forecast-icon">
+									
+								</div>
+								<div id="forecastTemp2" class="degree"></div>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="forecastDay3" class="day"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div id="forecastIcon3" class="forecast-icon">
+									
+								</div>
+								<div id="forecastTemp3" class="degree"></div>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="forecastDay4" class="day"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div id="forecastIcon4" class="forecast-icon">
+								
+								</div>
+								<div id="forecastTemp4" class="degree"></div>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="forecastDay5" class="day"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div id="forecastIcon5" class="forecast-icon">
+									
+								</div>
+								<div id="forecastTemp5" class="degree"></div>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="forecastDay6" class="day"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div id="forecastIcon6" class="forecast-icon">
+									
+								</div>
+								<div id="forecastTemp6"  class="degree"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{{>footer}}
+
+		</div>
+
+		{{!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> --}}
+		<script src="js/weather.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
