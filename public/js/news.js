@@ -82,7 +82,7 @@ function showError(error){
 
 const getNewsApi = async () => {
         try {
-            let urlLink = `https://newsapi.org/v2/everything?q=dunya-news&apiKey=31ddc3d64c4f4e32824d6078dd7c9d48`;
+            let urlLink = `https://newsapi.org/v2/everything?q=ary-news&apiKey=31ddc3d64c4f4e32824d6078dd7c9d48`;
             const apiJson = await fetch(urlLink);
             const apiObject = await apiJson.json();
             const apiArray = [apiObject];
