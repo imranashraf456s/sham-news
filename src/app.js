@@ -2,7 +2,7 @@ const path = require ("path");
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
-const portNumber = process.env.port || 4000;
+const portNumber = process.env.PORT || 4000;
 
 const sPath = path.join(__dirname , "../public");
 const staticPath = path.join(__dirname , "../templates/views");
