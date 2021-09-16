@@ -1,5 +1,5 @@
-const cityInput = document.getElementById("cityInput");
-const btnSearchNow = document.getElementById("btnSearchNow");
+// const cityInput = document.getElementById("cityInput");
+// const btnSearchNow = document.getElementById("btnSearchNow");
 const outputDay = document.getElementById("outputDay");
 const outputDate_Month = document.getElementById("outputDate_Month");
 const outputCity_CountryName = document.getElementById("outputCity_CountryName");
@@ -169,7 +169,7 @@ return formattedTime;
 }
 
 const setApiData = (array) => {
-    console.log(array[0].weather[0].icon);
+    //console.log(array[0].weather[0].icon);
     outputCity_CountryName.innerHTML = `${array[0].name}, ${array[0].sys.country}`;
     outputTemperature.innerHTML = `${Math.floor(array[0].main.temp - 273.15)}<sup>o</sup>C`;
     temperatureIcon.innerHTML = `<img src="http://www.openweathermap.org/img/wn/${array[0].weather[0].icon}@2x.png" alt="weather status" width=90>`;
@@ -250,15 +250,14 @@ const setApiData = (array) => {
 
 
 
-const count = 1;
+
 const getWeatherApi = async (Event) => {
-    Event.preventDefault();
-     if(cityInput.value == "")
-        {errorMess.innerHTML = "You entered nothing 🤦‍♂️";
-    }else{
+   //Event.preventDefault();
         try {
-            errorMess.innerHTML = "";
-            let urlLink = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=bfb99509e858ddd85bffdafdd69d24a8`;
+            //errorMess.innerHTML = "";
+            let urlLink = "";
+            const city = "Lahore";
+            urlLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bfb99509e858ddd85bffdafdd69d24a8`;
             const apiJson = await fetch(urlLink);
             const apiObject = await apiJson.json();
             const apiArray = [apiObject];
@@ -267,10 +266,10 @@ const getWeatherApi = async (Event) => {
             setApiData(apiArray);
 
         } catch(err) {
-            errorMess.innerHTML = "You entered a invalid city name 🤷‍♂️";
+            console.log("You entered a invalid city name 🤷‍♂️");
             
         }
-    }
 }
 
-btnSearchNow.addEventListener('click' , getWeatherApi);
+//btnSearchNow.addEventListener('click' , getWeatherApi);
+getWeatherApi();
